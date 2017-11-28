@@ -1,0 +1,37 @@
+---
+title: "ScatterPlots"
+author: "Priyanka Dhamija"
+date: "November 28, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## 2D ScatterPlot
+- Dataset Name: mtcars
+```{r, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+rm(list=ls())
+#Attach the dataset, use library plotly and plot_ly() 
+#to plot the interactive graphs
+attach(mtcars)
+library(plotly)
+plot_ly(mtcars, x=wt, y=mpg, mode="markers", 
+        color=as.factor(cyl), size=hp)
+```
+
+
+## 3D ScatterPlot
+- Dataset Name: mtcars
+```{r, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+attach(mtcars)
+library(plotly)
+plot_ly(mtcars, x=wt, y=mpg, z=disp,type="scatter3d",
+        mode="markers", color=disp)
+```
+
+
+## Thank you
+- :)
